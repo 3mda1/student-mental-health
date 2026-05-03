@@ -1,0 +1,90 @@
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    color:white;
+    overflow-x:hidden;
+    background: linear-gradient(-45deg,#0f172a,#1e293b,#0f766e,#1e3a8a);
+    background-size: 400% 400%;
+    animation: bg 12s ease infinite;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* ===== Glass Card ===== */
+
+#auth, #app{
+    width:350px;
+    margin:60px auto;
+    padding:20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+/* ===== Inputs ===== */
+
+input{
+    width:90%;
+    padding:10px;
+    margin:8px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    transform:scale(1.03);
+}
+
+/* ===== Buttons ===== */
+
+button{
+    padding:10px 15px;
+    margin:6px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:linear-gradient(45deg,#38bdf8,#6366f1);
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.07);
+    box-shadow:0 0 15px #38bdf8;
+}
+
+/* ===== Title ===== */
+
+h1{
+    text-align:center;
+    font-size:28px;
+    margin-top:20px;
+    text-shadow:0 0 10px #38bdf8;
+}
+
+/* ===== Emoji Animation ===== */
+
+#emojiAnim{
+    font-size:40px;
+    animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+
+/* ===== Dashboard text ===== */
+
+#app p{
+    font-size:14px;
+    opacity:0.9;
+}

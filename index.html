@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MoodFlow Ultra Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<h1>🧠 MoodFlow Ultra Dashboard</h1>
+
+<!-- AUTH -->
+<div id="auth">
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+    <h3 id="welcome"></h3>
+
+    <p>Total Days: <span id="total">0</span></p>
+    <p>Average Stress: <span id="avg">0</span></p>
+
+    <canvas id="chart"></canvas>
+
+    <hr>
+
+    <h3>Choose Mood</h3>
+
+    <button onclick="setMood('happy')">😄 Happy</button>
+    <button onclick="setMood('ok')">😐 Ok</button>
+    <button onclick="setMood('sad')">😢 Sad</button>
+
+    <div id="emojiAnim">😄</div>
+
+    <br>
+
+    <input id="stress" type="range" min="0" max="10">
+    <input id="note" placeholder="Write note...">
+
+    <button onclick="addMood()">Save Mood</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
